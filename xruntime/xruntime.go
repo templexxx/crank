@@ -10,8 +10,3 @@ package xruntime
 func ProcYield(cycles uint32) {
 	pyield(cycles)
 }
-
-// TODO func ProcYieldNS(nanoseconds int64) {} will it work?
-// nanoseconds -> cycles (depends on CPU family which detected in init)
-
-// TODO DoSpins (with default cycles for ProcYield)
