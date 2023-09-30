@@ -1,3 +1,4 @@
+// Package xruntime provides low-level runtime operations.
 package xruntime
 
 // ProcYield yields logic processor for a while (decided by cycles).

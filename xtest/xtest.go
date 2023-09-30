@@ -1,3 +1,4 @@
+// Package xtest is not a testing framework, just a collection of testing helper tools.
 package xtest
 
 import (
