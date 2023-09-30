@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+// Package xstrconv provides functions for string <-> bytes.
 package xstrconv
 
 import (
