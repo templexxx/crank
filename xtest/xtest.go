@@ -3,9 +3,13 @@ package xtest
 
 import (
 	"flag"
+	"math/rand"
+
+	"github.com/templexxx/tsc"
 )
 
 var _propEnabled = flag.Bool("xtest.prop", false, "enable properties testing or not")
+var _randSeed = rand.New(rand.NewSource(tsc.UnixNano()))
 
 // IsPropEnabled returns enable properties testing or not.
 // Default is false.
@@ -22,4 +26,10 @@ func IsPropEnabled() bool {
 	}
 
 	return *_propEnabled
+}
+
+// FillRand fills p with random bytes.
+func FillRand(p []byte) {
+	_randSeed.Seed(tsc.UnixNano())
+	_randSeed.Read(p)
 }
