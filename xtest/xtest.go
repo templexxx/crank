@@ -30,6 +30,5 @@ func IsPropEnabled() bool {
 
 // FillRand fills p with random bytes.
 func FillRand(p []byte) {
-	_randSeed.Seed(tsc.UnixNano())
 	_randSeed.Read(p)
 }
