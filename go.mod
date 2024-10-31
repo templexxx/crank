@@ -3,10 +3,10 @@ module github.com/templexxx/crank
 go 1.21.0
 
 require (
-	github.com/BurntSushi/toml v1.3.2
+	github.com/BurntSushi/toml v1.4.0
 	github.com/docker/go-units v0.5.0
-	github.com/klauspost/cpuid/v2 v2.2.6
-	github.com/stretchr/testify v1.8.4
+	github.com/klauspost/cpuid/v2 v2.2.8
+	github.com/stretchr/testify v1.9.0
 	github.com/templexxx/tsc v1.2.3
 	github.com/zaibyte/nanozap v0.0.8
 )
