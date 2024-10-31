@@ -23,7 +23,14 @@ import (
 	"path/filepath"
 
 	"github.com/templexxx/crank/config"
-	"github.com/templexxx/crank/config/settings"
+)
+
+const (
+	// DefaultLogRoot is the default log files path root.
+	// e.g.:
+	// <DefaultLogRoot>/<appName>/access.log
+	// & <DefaultLogRoot>/<appName>/error.log
+	DefaultLogRoot = "/var/log/xlog"
 )
 
 // Config is the log configs of a zai application.
@@ -36,7 +43,7 @@ type Config struct {
 // MakeLogger init global error logger and returns logger for application.
 func (c *Config) MakeLogger(appName string) (el *ErrorLogger, err error) {
 
-	config.Adjust(&c.Output, filepath.Join(settings.DefaultLogRoot, appName, "error.log"))
+	config.Adjust(&c.Output, filepath.Join(DefaultLogRoot, appName, "error.log"))
 	config.Adjust(&c.Level, "info")
 
 	el, err = NewErrorLogger(c.Output, c.Level, &c.Rotate)
